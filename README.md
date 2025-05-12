@@ -1,6 +1,6 @@
 # responsiveui
 
-A new Flutter project.
+Responsive Admin Dash Board using flutter framework
 
 ## Getting Started
 
