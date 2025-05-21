@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsiveui/models/drawer_item_model.dart';
 import 'package:responsiveui/utils/app_images.dart';
 import 'package:responsiveui/widgets/CustomDrawerListView.dart';
-import 'package:responsiveui/widgets/drawer_item.dart';
 import 'package:responsiveui/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -20,7 +18,7 @@ class CustomDrawer extends StatelessWidget {
               subtitle: 'demo@gmail.com',
             ),
             const SizedBox(height: 8),
-            CustomDrawerListView()
+            CustomDrawerListView(),
           ],
         ));
   }
