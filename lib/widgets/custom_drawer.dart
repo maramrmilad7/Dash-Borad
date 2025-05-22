@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsiveui/models/drawer_item_model.dart';
 import 'package:responsiveui/utils/app_images.dart';
 import 'package:responsiveui/widgets/CustomDrawerListView.dart';
+import 'package:responsiveui/widgets/inactive_item.dart';
 import 'package:responsiveui/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -10,15 +12,43 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
-        child: Column(
-          children: [
-            UserInfoListTile(
-              image: Assets.imagesAvatar3,
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: UserInfoListTile(
+                image: Assets.imagesAvatar3,
+                title: 'Lekan Okeowo',
+                subtitle: 'demo@gmail.com',
+              ),
             ),
-            const SizedBox(height: 8),
+            SliverToBoxAdapter(
+              child: SizedBox(height: 8),
+            ),
             CustomDrawerListView(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  Expanded(
+                      child: SizedBox(
+                    height: 20,
+                  )),
+                  InActiveItem(
+                      drawerItemModel: DrawerItemModel(
+                    title: 'Settings System',
+                    image: Assets.imagesSettings,
+                  )),
+                  InActiveItem(
+                      drawerItemModel: DrawerItemModel(
+                    title: 'Logout',
+                    image: Assets.imagesLogout,
+                  )),
+                  SizedBox(
+                    height: 48,
+                  )
+                ],
+              ),
+            )
           ],
         ));
   }
