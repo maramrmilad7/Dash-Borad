@@ -12,7 +12,7 @@ class DashBoardView extends StatelessWidget {
       body: AdaptiveLayoutWidget(
         mobileLayout: (context) => const Center(child: Text('Mobile Layout')),
         tabletLayout: (context) => const Center(child: Text('Tablet Layout')),
-        desktopLayout: (context) => DashBoardDesktopLayout(),
+        desktopLayout: (context) =>const DashBoardDesktopLayout(),
       ),
     );
   }
