@@ -23,7 +23,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(
             imageColor: Colors.white,
-            //   iconColor: Colors.white,
+              iconColor: Colors.white,
             imageBackground: Colors.white.withOpacity(0.100000000149011612),
             image: itemModel.image,
           ),
