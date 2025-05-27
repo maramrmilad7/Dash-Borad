@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsiveui/widgets/custo_text_feild.dart';
 
 import 'package:responsiveui/widgets/custom_background_container.dart';
 import 'package:responsiveui/widgets/latest_transaction.dart';
@@ -19,8 +20,11 @@ class QuickInvoiceItem extends StatelessWidget {
           Divider(
             height: 48,
           ),
+          CustomTextFeild()
         ],
       ),
     );
   }
 }
+
+
