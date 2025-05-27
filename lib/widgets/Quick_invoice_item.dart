@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:responsiveui/widgets/custom_background_container.dart';
+import 'package:responsiveui/widgets/latest_transaction.dart';
 import 'package:responsiveui/widgets/quick_invoice_header.dart';
 
 class QuickInvoiceItem extends StatelessWidget {
@@ -12,10 +14,13 @@ class QuickInvoiceItem extends StatelessWidget {
       child: Column(
         children: [
           QuickInvoiceHeader(),
+          const SizedBox(height: 24),
+          LatsetTransaction(),
+          Divider(
+            height: 48,
+          ),
         ],
       ),
     );
   }
 }
-
-

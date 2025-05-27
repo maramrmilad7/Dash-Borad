@@ -7,12 +7,10 @@ class QuickInvoiceHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           "Quick Invoice",
           style: AppStyles.styleSemiBold20,
-          //  style: Theme.of(context).textTheme.headlineSmall,
         ),
         Spacer(),
         Icon(
