@@ -4,6 +4,7 @@ import 'package:responsiveui/widgets/Quick_invoice_item.dart';
 import 'package:responsiveui/widgets/all_expenses_widget.dart';
 import 'package:responsiveui/widgets/custom_drawer.dart';
 import 'package:responsiveui/widgets/my_card.dart';
+import 'package:responsiveui/widgets/my_card_page_view.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
   const DashBoardDesktopLayout({super.key});
@@ -19,7 +20,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
           height: 24,
         ),
         Expanded(
-          child: MyCard(),
+          child: MyCardPageView(),
         )
       ],
     );
