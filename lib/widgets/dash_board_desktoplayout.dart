@@ -6,6 +6,7 @@ import 'package:responsiveui/widgets/custom_drawer.dart';
 import 'package:responsiveui/widgets/my_card.dart';
 import 'package:responsiveui/widgets/my_card_page_view.dart';
 import 'package:responsiveui/widgets/my_cards_section.dart';
+import 'package:responsiveui/widgets/transaction_hestory.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
   const DashBoardDesktopLayout({super.key});
@@ -21,7 +22,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
           height: 24,
         ),
         Expanded(
-          child: MyCardsSection(),
+          child: TransactionHestory(),
         )
       ],
     );
