@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsiveui/models/drawer_item_model.dart';
-import 'package:responsiveui/utils/app_styles.dart';
 import 'package:responsiveui/widgets/active_item.dart';
 import 'package:responsiveui/widgets/inactive_item.dart';
 
