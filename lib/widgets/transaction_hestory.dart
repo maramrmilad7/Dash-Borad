@@ -10,10 +10,12 @@ class TransactionHestory extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-      TransactionHistoryHeader(),
-      SizedBox(height: 20,),
-      TransactionHistoryListView()
-      ],)
-  ;
+        TransactionHistoryHeader(),
+        SizedBox(
+          height: 20 + 16,
+        ),
+        TransactionHistoryListView()
+      ],
+    );
   }
 }
