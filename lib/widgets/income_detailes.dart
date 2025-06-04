@@ -20,10 +20,6 @@ class IncomeDetailes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        children: List.generate(list.length, (index) {
-      return ItemDetails(
-        itemDetailsModel: list[index],
-      );
-    }));
+        children: list.map((e) => ItemDetails(itemDetailsModel: e)).toList());
   }
 }
