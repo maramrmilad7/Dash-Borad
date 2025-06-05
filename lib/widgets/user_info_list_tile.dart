@@ -5,8 +5,8 @@ import 'package:responsiveui/utils/app_styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({
-    super.key,required this.userInfoModel,
-   
+    super.key,
+    required this.userInfoModel,
   });
   final UserInfoModel userInfoModel;
   @override
@@ -15,13 +15,18 @@ class UserInfoListTile extends StatelessWidget {
       color: Color(0xFFFAFAFA),
       elevation: 0,
       child: ListTile(
-        leading: SvgPicture.asset(userInfoModel.image),
-        title: Text(userInfoModel.title, style: AppStyles.styleSemiBold16(context)),
-        subtitle: Text(
-         userInfoModel.subtitle,
-          style: AppStyles.styleRegular12(context),
-        ),
-      ),
+          leading: SvgPicture.asset(userInfoModel.image),
+          title: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(userInfoModel.title,
+                  style: AppStyles.styleSemiBold16(context))),
+          subtitle: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userInfoModel.subtitle,
+              style: AppStyles.styleRegular12(context),
+            ),
+          )),
     );
   }
 }
