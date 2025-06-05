@@ -15,7 +15,7 @@ class ActiveItem extends StatelessWidget {
       ),
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.styleBold16,
+        style: AppStyles.styleBold16(context),
       ),
     );
   }

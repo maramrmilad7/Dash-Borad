@@ -8,7 +8,7 @@ class MyCardHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Text(
           'My Card',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         );
   }
 }

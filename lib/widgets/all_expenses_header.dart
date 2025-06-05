@@ -10,14 +10,14 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
         Text(
           'All Expenses',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Expanded(child: SizedBox()),
         TextButton(
           onPressed: () {},
-          child: const Text(
+          child:  Text(
             'View All',
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
         ),
       ],

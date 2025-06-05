@@ -17,9 +17,9 @@ final  ItemDetailsModel itemDetailsModel;
       ),
       title: Text(
         itemDetailsModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
-      subtitle: Text(itemDetailsModel.subTitle, style: AppStyles.styleMedium16),
+      subtitle: Text(itemDetailsModel.subTitle, style: AppStyles.styleMedium16(context)),
     );
   }
 }

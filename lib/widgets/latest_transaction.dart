@@ -14,7 +14,7 @@ class LatsetTransaction extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Text(
             "Latest Transaction",
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
         ),
         LatestTransactionListView()
