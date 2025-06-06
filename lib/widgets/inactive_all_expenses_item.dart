@@ -16,7 +16,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             color: Colors.white,
 
         shape: RoundedRectangleBorder(
-          //   side: BorderSide(color: Color(0xFFF1F1F1), width: 1),
+            side: BorderSide(color: Color(0xFFF1F1F1), width: 1),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -28,11 +28,19 @@ class InActiveAllExpensesItem extends StatelessWidget {
             image: itemModel.image,
           ),
           SizedBox(height: 34),
-          Text(itemModel.title, style: AppStyles.styleMedium16(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(itemModel.title, style: AppStyles.styleMedium16(context))),
           SizedBox(height: 8),
-          Text(itemModel.date, style: AppStyles.styleRegular14(context)),
+          FittedBox(
+                        fit: BoxFit.scaleDown,
+
+            child: Text(itemModel.date, style: AppStyles.styleRegular14(context))),
           SizedBox(height: 16),
-          Text(itemModel.price, style: AppStyles.styleSemiBold24(context)),
+          FittedBox(
+                        fit: BoxFit.scaleDown,
+
+            child: Text(itemModel.price, style: AppStyles.styleSemiBold24(context))),
         ],
       ),
     );

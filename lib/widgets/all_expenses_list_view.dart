@@ -5,30 +5,31 @@ import 'package:responsiveui/widgets/all_expenses_item.dart';
 
 class AllExpensesListView extends StatefulWidget {
   const AllExpensesListView({super.key});
-  static const List<AllExpensesItemModel> itemModel = [
-    AllExpensesItemModel(
-      image: Assets.imagesIncome,
-      title: 'Income',
-      price: r'$120.00',
-      date: 'April 2025',
-    ),
-    AllExpensesItemModel(
-      image: Assets.imagesExpenses,
-      title: 'Expense',
-      price: r'$80.00',
-      date: 'April 2025',
-    ),
-    AllExpensesItemModel(
-      image: Assets.imagesBalance,
-      title: 'Balance',
-      price: r'$40.00',
-      date: 'April 2025',
-    ),
-  ];
 
   @override
   State<AllExpensesListView> createState() => _AllExpensesListViewState();
 }
+
+const List<AllExpensesItemModel> itemModel = [
+  AllExpensesItemModel(
+    image: Assets.imagesIncome,
+    title: 'Income',
+    price: r'$120.00',
+    date: 'April 2025',
+  ),
+  AllExpensesItemModel(
+    image: Assets.imagesExpenses,
+    title: 'Expense',
+    price: r'$80.00',
+    date: 'April 2025',
+  ),
+  AllExpensesItemModel(
+    image: Assets.imagesBalance,
+    title: 'Balance',
+    price: r'$40.00',
+    date: 'April 2025',
+  ),
+];
 
 int SelectedIndex = 0;
 
@@ -36,38 +37,47 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        //  children: itemModel.map((e) => Expanded(child: AllExpensesItem(itemModel: e))).toList(),
-        children: AllExpensesListView.itemModel.asMap().entries.map((e) {
-      int index = e.key;
-      var item = e.value;
-      if (index == 1) {
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              setState(() {
-                SelectedIndex = index;
-              });
-            },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(
-                  isSelected: SelectedIndex == index, itemModel: item),
-            ),
-          ),
-        );
-      } else {
-        return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                SelectedIndex = index;
-              });
+              SelectedIndex = 0;
             },
             child: AllExpensesItem(
-                isSelected: SelectedIndex == index, itemModel: item),
+              isSelected: SelectedIndex == 0,
+              itemModel: itemModel[0],
+            ),
           ),
-        );
-      }
-    }).toList());
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              SelectedIndex = 1;
+            },
+            child: AllExpensesItem(
+              isSelected: SelectedIndex == 1,
+              itemModel: itemModel[1],
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              SelectedIndex = 2;
+            },
+            child: AllExpensesItem(
+              isSelected: SelectedIndex == 2,
+              itemModel: itemModel[2],
+            ),
+          ),
+        )
+      ],
+    );
   }
 }
